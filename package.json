@@ -1,6 +1,6 @@
 {
   "name": "express-playground",
-  "description": "playing around with express",
+  "description": "just a base for a node app using express, jade, and stylus",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
