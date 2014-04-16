@@ -9,6 +9,11 @@ This is just a base for a node app using express, jade, and stylus.
 * [stylus](http://learnboost.github.io/stylus/) - css preprocessor, compiled in `app.js`
 * [grunt](http://gruntjs.com/) - currently just used for jshinting (run `grunt test`)
 
+## running it
+
+* `grunt test` to jshint
+* `node app.js` to run at `localhost:5678`
+
 ## made by jenn
 
 * [@jennschiffer](http://twitter.com/jennschiffer)
