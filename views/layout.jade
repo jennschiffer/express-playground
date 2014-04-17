@@ -3,7 +3,8 @@ html(lang="en")
   head
     title #{title} &bull; express playground
     link(rel="stylesheet", href="/css/base.css")
-  body
+
+  body(id!="#{bodyID}")
     header
       h1 express playground
 
@@ -16,6 +17,7 @@ html(lang="en")
 
     .container
       block content
+
     footer
       p 
         made by 
