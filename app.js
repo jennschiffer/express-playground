@@ -4,7 +4,7 @@ var stylus = require('stylus');
 var nib = require('nib');
 
 // require route scripts
-var routesIndex = require('./routes/index');
+var routes = require('./routes/index');
 var routesPage = require('./routes/page');
 
 // create express app
@@ -28,12 +28,11 @@ app.use(stylus.middleware({
   })
 );
 
-
 // set dir for static css/js/assets
 app.use(express.static(__dirname + '/public'));
 
 // set up routes
-app.use('/', routesIndex);
+app.use('/', routes);
 app.use('/page', routesPage);
 
 // on `node app.js` app will run at localhost:5678
