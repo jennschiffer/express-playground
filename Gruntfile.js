@@ -12,12 +12,19 @@ module.exports = function(grunt) {
         'app.js',
         'public/js/*.js'
       ]
+    },
+
+    csslint: {
+      all: {
+        src: ['public/css/base.css']
+      }
     }
 
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
 
-  grunt.registerTask('test', ['jshint']);
+  grunt.registerTask('test', ['jshint', 'csslint']);
 
 };

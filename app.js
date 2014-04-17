@@ -14,9 +14,6 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
-// set dir for static css/js/assets
-app.use(express.static(__dirname + '/public'));
-
 // compile stylus and import nib for reset/css3
 function compile(str, path) {
   return stylus(str)
@@ -30,6 +27,10 @@ app.use(stylus.middleware({
     compile: compile
   })
 );
+
+
+// set dir for static css/js/assets
+app.use(express.static(__dirname + '/public'));
 
 // set up routes
 app.use('/', routesIndex);
